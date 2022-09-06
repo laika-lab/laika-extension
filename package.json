@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "rimraf dist && parcel build src/* --no-content-hash --no-source-maps --dist-dir dist --no-cache --detailed-report 0 && copyfiles manifest.json dist"
+  },
+  "browserslist": [
+    "last 1 Chrome version",
+    "last 1 Firefox version"
+  ],
+  "xo": {
+    "envs": [
+      "browser",
+      "webextensions"
+    ]
+  },
+  "devDependencies": {
+    "@parcel/config-webextension": "^2.6.2",
+    "@parcel/core": "^2.7.0",
+    "@types/chrome": "^0.0.196",
+    "@types/node": "^18.7.15",
+    "buffer": "^6.0.3",
+    "copyfiles": "^2.4.1",
+    "parcel": "^2.6.2",
+    "process": "^0.11.10",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "@cosmjs/json-rpc": "^0.28.13",
+    "axios": "^0.27.2"
+  }
+}
